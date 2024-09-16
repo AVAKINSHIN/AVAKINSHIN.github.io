@@ -1,8 +1,103 @@
+<!DOCTYPE html>
 <html>
   <head>
-    
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>DASH</p>
+    <meta charset="utf-8" />
+    <div>
+    <h1>Ссылки</h1>
+    <ul>
+      <li><a href="http://kubsu.ru/">Ссылка на главную страницу университета http</a></li>
+      <li><a href=https://kubsu.ru/">Ссылка на главную страницу КУБГУ в https</a></li>
+      <li><p>Ссылка-изображение на внутреннюю страницу сайта КУБГУ (внизу)</p>
+        <a href="https://www.kubsu.ru/index.php">
+         <img src="https://avatars.mds.yandex.net/get-mpic/5233736/2a0000018a939e9f0c9297a3edbcc2e1f18f/450x600" border="0" height="500px" width="500px" />
+        </a>
+      </li>
+      <li><a href="https://www.kubsu.ru/ru/node/42509">Ссылка на внутреннюю страницу https://kubsu.ru/ru/node/42509</a></li>
+      <li><a href="/ru/node/42509">Сокращённая ссылка на внутреннюю страницу</a></li>
+      <li><a href="/">Сокращённая ссылка на главную страницу</a></li>
+      <li><a href="#resewer">Ссылка на фрагмент текущей страницы (Корги)</a></li>
+      <li><a href="https://eu.huel.com/products/huel-black-edition?utm_source=fb&utm_medium=cpc&utm_campaign=ROE_ACQ_PRO_PURCHASES_7D-CLICK_JJ24_ASC">
+        Ссылка с тремя параметрами URL (ключ=значение&ключ=значение)
+      </a></li>
+      <li><a href="https://avatars.mds.yandex.net/i?id=ead3ac78b8b489b5dc0d4e691f1aa4957ba21912-4266591-images-thumbs&n=13/">
+        Ссылка с параметром id в URL (i?id=значение)
+      </a></li>
+      <li><a href="./">Относительная ссылка на текущий каталог</a></li>
+      <li><a href="/about">Относительная ссылка в каталоге /about</a></li>
+      <li><a href="../">Относительная ссылка на каталог уровнем выше текущего</a></li>
+      <li><a href="../../">Два уровня выше текущего</a></li>
+        <li><p>Контекстная ссылка внутри абзаца</p><br />
+          <a name="resewer"></a>
+          <h1>Корги</h1> <br />
+          <p>
+            Симпатичные миниатюрные <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0">собаки</a> с короткими лапами вошли 
+            в моду в России несколько лет назад. С каждым годом эти питомцы набирают все большую популярность. Это не удивительно: смышленые и крайне 
+            общительные, <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D1%88-%D0%BA%D0%BE%D1%80%D0%B3%D0%B8">корги</a> становятся 
+            прекрасными компаньонами для взрослых и детей, а также легко поддаются обучению. Но у 
+            <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0">собак</a> этой породы есть несколько особенностей, из-за которых 
+            их может быть довольно сложно содержать. О чем нужно знать, прежде чем завести 
+            <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D1%88-%D0%BA%D0%BE%D1%80%D0%B3%D0%B8">корги</a>, а также как правильно 
+            ухаживать за собакой этой породы и чем ее кормить — в материале 
+            «<a href="https://lenta.ru/articles/2023/10/30/osobennosti_porodi_korgi/?ysclid=m10vneevyt863758495">Ленты.ру</a>».
+          </p>
+        </li>
+        <li><a href="https://lenta.ru/articles/2023/10/30/osobennosti_porodi_korgi/?ysclid=m110l911av758081089/#desktop-fullscreen">
+          Ссылка на фрагмент страницы стороннего сайта
+        </a></li>
+        <li>Ссылки из прямоугольных и круглых областей картинки (ниже)<br />
+          <img src="https://avatars.mds.yandex.net/i?id=409c00831c1d3fb3c5e712e67597eb7b806d439d-5235191-images-thumbs&n=13" 
+            width="500px" height="500px" usemap="#map" alt="Навигация" />
+          <map name="map">
+            <area shape="circle" coords="230,340, 100" href="https://yandex.ru/images/search?from=tabbar&text=%D0%BA%D0%BE%D1%80%D0%B3%D0%B8" />
+            <area shape="rect" coords="400,100, 500,0" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D1%88-%D0%BA%D0%BE%D1%80%D0%B3%D0%B8" />
+          </map>
+        </li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="https://lenta.ru/" rel="nofollow">Ссылка, запрещённая для индексации поисковиками и перехода поискавикам</a></li>
+        <li><p>Нумерованный список ссылок с подписями title (интернет-магазины)</p>
+          <ol>
+            <li><a href="https://market.yandex.ru/" title="ЯндексМаркет">ЯндексМаркет</a></li>
+            <li><a href="https://www.wildberries.ru/" title="WildBeries">WildBeries</a></li>
+            <li><a href="https://www.citilink.ru/" title="Ситилинк">Ситилинк</a></li>
+            <li><a href="https://megamarket.ru/" title="МегаМаркет">Мегамаркет</a></li>
+            <li><a href="https://www.ozon.ru/" title="OZON">OZON</a></li>
+          </ol>
+        </li>
+        <li><a href="ftp://AVAKINSHIN485@tavalik.ru/Temp">Ссылка на ftp</a></li>
+      </ul>
+    </div>
+    <h1>Форма</h1>
+    <form>
+      <ol>
+        <li><label for="name">ФИО </label><input type="text" placeholder="ФИО" id="name" /></li>
+        <li><label for="telephone">Номер телефона </label><input type="tel" placeholder="Номер телефона" id="telephone" /></li>
+        <li><label for="email">Email-адрес </label><input type="email" placeholder="Email-адрес" id="email" /></li>
+        <li><label for="date">Дата рождения </label><input type="date" placwholder="Дата рождения" id="date"/></li>
+        <li><p>Пол</p> <button>Мужской</button> <button>Женский</button></li>
+        <li>Любимый язык программирования<br />
+          <select size="11" name="select" multiple>
+            <option>Pascal</option>
+            <option>C</option>
+            <option>C++</option>
+            <option>JavaScript</option>
+            <option>PHP</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>Haskel</option>
+            <option>Clojure</option>
+            <option>Prolog</option>
+            <option>Scala</option>
+          </select>
+        </li>
+        <li><p>Биография</p><textarea></textarea></li>
+        <li><p>С контрактом ознакомлен(а)</p><button>ДА</button><button>НЕТ</button></li>
+      </ol>
+      <button>Сохранить</button>
+    </form>
   </body>
 </html>
