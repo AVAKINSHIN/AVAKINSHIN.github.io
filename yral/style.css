@@ -17,5 +17,8 @@ textarea  {
     border: 3px solid white;
     background: green;
     border-radius: 10px;
+
+}
+#r {
     font-color: white;
 }
