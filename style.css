@@ -9,7 +9,7 @@ button {
     background: blue;
     color: white;
 }
-div.form {
+div {
     width: 100vw;
     background: green;
     outline: 2px solid blue;
