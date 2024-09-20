@@ -12,4 +12,7 @@ textarea  {
 #fram p{
     widtx: 500px;
     height: 100px;
+    border: 3px solid blue;
+    background: green;
+    border-radius: 10px;
 }
