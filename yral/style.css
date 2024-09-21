@@ -1,8 +1,8 @@
-div {
-    width: 97vw; /* Размеры */
-    background: #fc0; /* Цвет фона */
-    outline: 2px solid #000; /* Чёрная рамка */
-    border: 3px solid #fff; /* Белая рамка */
+div.reset {
+    width: 97vw; 
+    background: #fc0; 
+    outline: 2px solid #000; 
+    border: 3px solid #fff; 
     border-radius: 10px;
     text-align: center;
 }
@@ -16,10 +16,8 @@ textarea  {
     outline: 2px solid blue;
     border: 3px solid white;
     background: green;
-    color: white
+    color: white;
     border-radius: 10px;
     text-align: center;
 }
-#r {
-    color: white;
-}
+
