@@ -33,8 +33,10 @@ td.nechet {
 td.chet {
     border: 3px solid #ffffff;
     background: #ff0000;
+    color: white;
 }
 th {
     border: 3px solid #ffffff;
     background: #9900ff;
+    color: white;
 }
