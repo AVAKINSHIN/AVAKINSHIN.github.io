@@ -62,4 +62,5 @@ table {
     position: absolute;
     left: 50%;
     transform: (-50%, -50%);
+    width: 100vw;
 }
