@@ -8,6 +8,7 @@ div.reset {
     text-align: center;
     position: relative;
     left: 50%;
+    transform: (-50%, -50%);
 }
 textarea  {
    width: 500px;
