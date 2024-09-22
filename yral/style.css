@@ -38,6 +38,8 @@ tr.nechet {
     background: #ff9900;
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
+    text-align: center;
+    max-width: 960px;
 }
 tr.chet {
     border: 3px solid #ffffff;
