@@ -24,7 +24,7 @@ textarea  {
     border-radius: 10px;
     text-align: center;
     position: relative;
-    left: 0%;
+    left: 10%;
     transform: (-50%, -50%);
 }
 tr.nechet {
