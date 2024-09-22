@@ -20,7 +20,7 @@ textarea  {
     border-radius: 10px;
     text-align: center;
 }
-td.nechet {
+tr.nechet {
     border: 3px solid #ffffff;
     background: #00ff00;
 }
@@ -30,7 +30,7 @@ td.nechet {
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
 }
-td.chet {
+tr.chet {
     border: 3px solid #ffffff;
     background: #ff0000;
     color: white;
@@ -39,8 +39,4 @@ th {
     border: 3px solid #ffffff;
     background: #9900ff;
     color: white;
-}
-tr.nechet {
-    border: 3px solid #ffffff;
-    background: #00ff00;
 }
