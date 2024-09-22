@@ -13,6 +13,7 @@ textarea  {
 }
 #fram{
     widtx: 97vw;
+    max-width: 960px;
     height: 100px;
     outline: 2px solid blue;
     border: 3px solid white;
@@ -20,6 +21,9 @@ textarea  {
     color: #ffffff;
     border-radius: 10px;
     text-align: center;
+    position: absolute;
+    left: 50%;
+    right: 50%;
 }
 tr.nechet {
     outline: 2px solid #000000;
