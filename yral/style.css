@@ -20,9 +20,9 @@ textarea  {
     border-radius: 10px;
     text-align: center;
 }
-td {
+td.nechet {
     border: 3px solid #ffffff;
-    background: #b7b7b7;
+    background: #00ff00;
 }
 #g {
     width: 97vw;
