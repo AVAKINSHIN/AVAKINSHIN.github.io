@@ -30,3 +30,11 @@ td.nechet {
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
 }
+td.chet {
+    border: 3px solid #ffffff;
+    background: #ff0000;
+}
+th {
+    border: 3px solid #ffffff;
+    background: #9900ff;
+}
