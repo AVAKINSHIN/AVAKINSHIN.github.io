@@ -7,7 +7,7 @@ div.reset {
     border-radius: 10px;
     text-align: center;
     position: relative;
-    left: 50%;
+    left: 40%;
     transform: (-50%, -50%);
 }
 textarea  {
