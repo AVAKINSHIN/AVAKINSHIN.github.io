@@ -11,7 +11,7 @@ textarea  {
    height: 500px;
 }
 #fram{
-    widtx: 500px;
+    widtx: 97vw;
     height: 100px;
     outline: 2px solid blue;
     border: 3px solid white;
@@ -22,5 +22,11 @@ textarea  {
 }
 td {
     border: 3px solid #ffffff;
-    background: b7b7b7;
+    background: #b7b7b7;
+}
+#g {
+    width: 97vw;
+    background: #efefef;
+    border: 3px solid #ffffff;
+    outline: 2px solid #000000;
 }
