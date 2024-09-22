@@ -61,8 +61,6 @@ th {
     border: 2px solid #000000;
 }
 table {
-    position: absolute;
-    left: 50%;
-    transform: (-50%, -50%);
     width: 100vw;
+    max-width: 960px;
 }
