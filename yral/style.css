@@ -6,6 +6,8 @@ div.reset {
     border: 3px solid #fff; 
     border-radius: 10px;
     text-align: center;
+    position: relative;
+    left: 50%;
 }
 textarea  {
    width: 500px;
