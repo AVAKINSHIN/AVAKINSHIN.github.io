@@ -15,7 +15,8 @@ textarea  {
     height: 100px;
     outline: 2px solid blue;
     border: 3px solid white;
-    background: #cccccc;
+    background: green;
+    color: #ffffff;
     border-radius: 10px;
     text-align: center;
 }
