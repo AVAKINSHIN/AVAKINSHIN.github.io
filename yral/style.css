@@ -9,6 +9,7 @@ div.reset {
     position: relative;
     left: 20%;
     transform: (-50%, -50%);
+    flex-wrap: wrap;
 }
 textarea  {
    width: 500px;
