@@ -68,4 +68,6 @@ table {
     max-width: 960px;
 }
 img.logo {
+    width: 100px;
+    height: 100px;
 }
