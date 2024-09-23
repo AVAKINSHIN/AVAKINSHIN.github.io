@@ -7,7 +7,7 @@ div.reset {
     text-align: center;
 }
 textarea  {
-   width: 500px;
+   width: 50%;
    height: 500px;
 }
 #fram{
@@ -80,7 +80,7 @@ img.logo {
         flex-wrap: wrap;
     }
     textarea  {
-       width: 500px;
+       width: 50%;
        height: 500px;
     }
     #fram{
