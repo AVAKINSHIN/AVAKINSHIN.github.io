@@ -68,15 +68,9 @@ img.logo {
 }
 div.tablet {
     display: flex;
-    order: 1;
-}
-div.format {
-    display: flex;
-    order: 3;
 }
 div.list {
-    display: flex;
-    order: 2;
+    display: flex
 }
 @media (min-width: 768px)
 {
