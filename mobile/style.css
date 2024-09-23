@@ -67,10 +67,9 @@ img.logo {
     border: 3px solid green;
 }
 div.tablet {
-    display: flex;
+
 }
 div.list {
-    display: flex
 }
 @media (min-width: 768px)
 {
