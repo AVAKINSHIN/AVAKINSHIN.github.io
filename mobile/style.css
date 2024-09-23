@@ -77,3 +77,85 @@ img.logo {
     border-radius: 50px;
     border: 3px solid green;
 }
+@media screen and (width > 768px)
+{
+    div.reset {
+        width: 97vw;
+        max-width: 960px;
+        background: #fc0; 
+        outline: 2px solid #000; 
+        border: 3px solid #fff; 
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        left: 20%;
+        transform: (-50%, -50%);
+        flex-wrap: wrap;
+    }
+    textarea  {
+       width: 500px;
+       height: 500px;
+    }
+    #fram{
+        widtx: 97vw;
+        max-width: 960px;
+        outline: 2px solid blue;
+        border: 3px solid white;
+        background: green;
+        color: #ffffff;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        left: 20%;
+        transform: (-50%, -50%);
+    }
+    tr.nechet {
+        outline: 2px solid #000000;
+        border: 3px solid #ffffff;
+        background: #00ff00;
+    }
+    #g {
+        width: 97vw;
+        background: #ff9900;
+        border: 3px solid #ffffff;
+        outline: 2px solid #000000;
+        text-align: center;
+        max-width: 960px;
+        position: relative;
+        left: 20%;
+        transform: (-50%, -50%);
+    }
+    tr.chet {
+        border: 3px solid #ffffff;
+        background: #ff0000;
+        color: white;
+        outline: 2px solid #000000;
+    }
+    tr.gas {
+        font-weight: bold;
+        color: white;
+        background: #20124d;
+        border: 3px solid #ffffff;
+        outline: 2px solid #000000;
+    }
+    th {
+        border: 3px solid #ffffff;
+        background: #9900ff;
+        color: white;
+        outline: 2px solid #000000;
+    }
+    td.b {
+        border: 3px solid #ffffff;
+        outline: 2px solid #000000;
+    }
+    table {
+        width: 100vw;
+        max-width: 960px;
+    }
+    img.logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        border: 3px solid green;
+    }
+}
