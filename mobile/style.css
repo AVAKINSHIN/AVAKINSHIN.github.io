@@ -78,7 +78,6 @@ img.logo {
         position: relative;
         left: 20%;
         transform: (-50%, -50%);
-        flex-wrap: wrap;
     }
     #fram{
         widtx: 97vw;
