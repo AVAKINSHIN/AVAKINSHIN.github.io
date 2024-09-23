@@ -66,6 +66,18 @@ img.logo {
     border-radius: 50px;
     border: 3px solid green;
 }
+div.tablet {
+    display: flex;
+    order: 1;
+}
+div.format {
+    display: flex;
+    order: 3;
+}
+div.list {
+    display: flex;
+    order: 2;
+}
 @media (min-width: 768px)
 {
     #reset {
