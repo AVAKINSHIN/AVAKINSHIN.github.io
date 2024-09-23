@@ -1,4 +1,4 @@
-div.reset {
+#reset {
     width: 97vw;
     background: #fc0; 
     outline: 2px solid #000; 
@@ -66,7 +66,7 @@ img.logo {
 }
 @media screen and (width > 768px)
 {
-    div.reset {
+    #reset {
         width: 97vw;
         max-width: 960px;
         background: #fc0; 
