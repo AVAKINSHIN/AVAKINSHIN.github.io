@@ -9,7 +9,6 @@ div.reset {
     position: relative;
     left: 20%;
     transform: (-50%, -50%);
-    flex-wrap: wrap;
 }
 textarea  {
    width: 500px;
@@ -68,7 +67,7 @@ td.b {
     outline: 2px solid #000000;
 }
 table {
-    width: 100vw;
+    width: 100%;
     max-width: 960px;
 }
 img.logo {
