@@ -67,6 +67,9 @@ td {
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
 }
+td.a {
+
+}
 table {
     width: 100vw;
     max-width: 960px;
