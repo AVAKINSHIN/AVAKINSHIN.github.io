@@ -82,6 +82,6 @@ div.list {
 }
 @media (min-width: 960px)
 {
-    #container { max-width: 960px; }
+    #container { max-width: 960px; justify-content: center; }
     #reset { max-width: 960px;}
 }
