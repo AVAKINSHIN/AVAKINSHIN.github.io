@@ -1,6 +1,6 @@
 #container {  display: flex; flex-direction: column; gap: 20px; align-items: safe center; }
 #reset {
-    width: 100vw;
+    width: 99vw;
     background: #fc0; 
     outline: 2px solid #000; 
     border: 3px solid #fff; 
@@ -13,7 +13,7 @@ textarea  {
    height: 500px;
 }
 #fram{
-    widtx: 100vw;
+    widtx: 99vw;
     outline: 2px solid blue;
     border: 3px solid white;
     background: green;
@@ -27,7 +27,7 @@ tr.nechet {
     background: #00ff00;
 }
 #g {
-    width: 100vw;
+    width: 99vw;
     background: #ff9900;
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
@@ -61,8 +61,8 @@ table {
     max-width: 960px;
 }
 img.logo {
-    width: 100px;
-    height: 100px;
+    width: 99px;
+    height: 99px;
     border-radius: 50px;
     border: 3px solid green;
 }
@@ -90,7 +90,7 @@ div.format {
 @media (min-width: 960px)
 {
     #reset {
-        width: 100vw;
+        width: 99vw;
         max-width: 960px;
         background: #fc0; 
         outline: 2px solid #000; 
@@ -100,7 +100,7 @@ div.format {
         position: relative;
     }
     #fram{
-        widtx: 100vw;
+        widtx: 99vw;
         max-width: 960px;
         outline: 2px solid blue;
         border: 3px solid white;
@@ -111,7 +111,7 @@ div.format {
         position: relative;
     }
     #g {
-        width: 100vw;
+        width: 99vw;
         background: #ff9900;
         border: 3px solid #ffffff;
         outline: 2px solid #000000;
