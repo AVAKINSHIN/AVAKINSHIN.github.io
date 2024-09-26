@@ -72,9 +72,6 @@ div.tablet {
 div.list {
     order: 2;
 }
-div.form{
-    order: 3;
-}
 @media (min-width: 768px)
 {
     #reset {
