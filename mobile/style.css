@@ -1,6 +1,6 @@
 #container {  display: flex; flex-direction: column; gap: 20px; align-items: safe center; }
 #reset {
-    width: 99vw;
+    width: 97vw;
     background: #fc0; 
     outline: 2px solid #000; 
     border: 3px solid #fff; 
@@ -13,7 +13,7 @@ textarea  {
    height: 500px;
 }
 #fram{
-    widtx: 99vw;
+    widtx: 97vw;
     outline: 2px solid blue;
     border: 3px solid white;
     background: green;
@@ -27,7 +27,7 @@ tr.nechet {
     background: #00ff00;
 }
 #g {
-    width: 99vw;
+    width: 97vw;
     background: #ff9900;
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
@@ -90,7 +90,6 @@ div.format {
 @media (min-width: 960px)
 {
     #reset {
-        width: 99vw;
         max-width: 960px;
         background: #fc0; 
         outline: 2px solid #000; 
@@ -100,7 +99,6 @@ div.format {
         position: relative;
     }
     #fram{
-        widtx: 99vw;
         max-width: 960px;
         outline: 2px solid blue;
         border: 3px solid white;
@@ -111,7 +109,6 @@ div.format {
         position: relative;
     }
     #g {
-        width: 99vw;
         background: #ff9900;
         border: 3px solid #ffffff;
         outline: 2px solid #000000;
