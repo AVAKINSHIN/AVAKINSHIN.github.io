@@ -74,6 +74,15 @@ div.list {
 }
 @media (min-width: 768px)
 {
+    div.list {
+        order: 1;
+    }
+    div.tablet {
+        order: 2;
+    }
+}
+@media (min-width: 960px)
+{
     #reset {
         width: 97vw;
         max-width: 960px;
