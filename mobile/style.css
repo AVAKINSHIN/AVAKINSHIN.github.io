@@ -83,8 +83,6 @@ div.list {
         border-radius: 10px;
         text-align: center;
         position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
     }
     #fram{
         widtx: 97vw;
@@ -96,8 +94,6 @@ div.list {
         border-radius: 10px;
         text-align: center;
         position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
     }
     #g {
         width: 97vw;
@@ -107,7 +103,5 @@ div.list {
         text-align: center;
         max-width: 960px;
         position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
     }
 }
