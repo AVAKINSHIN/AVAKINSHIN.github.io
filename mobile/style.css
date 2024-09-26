@@ -82,6 +82,6 @@ div.list {
 }
 @media (min-width: 960px)
 {
-    #container { max-width: 960px; align-content: safe center; }
+    #container { max-width: 960px; }
     #reset { max-width: 960px;}
 }
