@@ -72,6 +72,12 @@ div.tablet {
 div.list {
     order: 2;
 }
+div.form {
+    order: 3;
+}
+#fram {
+    order: 4;
+}
 @media (min-width: 768px)
 {
     div.list {
