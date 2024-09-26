@@ -74,40 +74,10 @@ div.list {
 }
 @media (min-width: 768px)
 {
-    #reset {
-        width: 97vw;
-        max-width: 960px;
-        background: #fc0; 
-        outline: 2px solid #000; 
-        border: 3px solid #fff; 
-        border-radius: 10px;
-        text-align: center;
-        position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
+    div.list {
+        order: 1;
     }
-    #fram{
-        widtx: 97vw;
-        max-width: 960px;
-        outline: 2px solid blue;
-        border: 3px solid white;
-        background: green;
-        color: #ffffff;
-        border-radius: 10px;
-        text-align: center;
-        position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
-    }
-    #g {
-        width: 97vw;
-        background: #ff9900;
-        border: 3px solid #ffffff;
-        outline: 2px solid #000000;
-        text-align: center;
-        max-width: 960px;
-        position: relative;
-        left: 20%;
-        transform: (-50%, -50%);
+    div.tablet {
+        order 2;
     }
 }
