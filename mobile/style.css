@@ -1,4 +1,4 @@
-#container { display: flex; flex-direction: column; gap: 20px; align-items: safe center; }
+#container { display: flex; flex-direction: column; gap: 20px; align-content: center; }
 #reset {
     width: 97vw;
     background: #fc0; 
@@ -82,6 +82,6 @@ div.list {
 }
 @media (min-width: 960px)
 {
-    #container { max-width: 960px; align-items: safe center; }
+    #container { max-width: 960px; align-content: safe center; }
     #reset { max-width: 960px;}
 }
