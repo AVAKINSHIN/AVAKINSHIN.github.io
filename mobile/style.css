@@ -94,6 +94,11 @@ div.format {
 }
 @media (min-width: 960px)
 {
+    #lay {
+        display: flex;
+        flex-direction: column;
+        align-items: safe center;
+    }
     #reset {
         max-width: 960px;
         background: #fc0; 
