@@ -82,6 +82,7 @@ div.format {
 }
 #fram {
     order: 4;
+    width: 98%;
 }
 @media (min-width: 768px)
 {
