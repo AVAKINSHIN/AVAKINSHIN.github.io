@@ -1,6 +1,9 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
 #container {  display: flex; flex-direction: column; gap: 20px; align-items: safe center; }
 #reset {
-    width: 97vw;
     background: #fc0; 
     outline: 2px solid #000; 
     border: 3px solid #fff; 
@@ -8,12 +11,9 @@
     text-align: center;
 }
 textarea  {
-   width: 500px;
-   max-width: 90%;
    height: 500px;
 }
 #fram{
-    widtx: 97vw;
     outline: 2px solid blue;
     border: 3px solid white;
     background: green;
@@ -27,7 +27,6 @@ tr.nechet {
     background: #00ff00;
 }
 #g {
-    width: 97vw;
     background: #ff9900;
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
@@ -58,7 +57,7 @@ td.b {
 }
 table {
     width: 100%;
-    max-width: 960px;
+    overflow: scroll;
 }
 img.logo {
     width: 99px;
