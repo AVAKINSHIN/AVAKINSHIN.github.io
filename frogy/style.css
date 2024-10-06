@@ -2,12 +2,16 @@ body, html {
     margin: 0;
     padding: 0;
 }
+container.fluid {
+    display: flex;
+    flex-direction: column;
+}
 #reset {
     background: #fc0; 
     outline: 2px solid #000; 
     border: 3px solid #fff; 
     border-radius: 10px;
-    text-align: center;
+    margin-bottom: 10px;
 }
 textarea  {
    height: 500px;
@@ -18,7 +22,6 @@ textarea  {
     background: green;
     color: #ffffff;
     border-radius: 10px;
-    text-align: center;
 }
 tr.nechet {
     outline: 2px solid #000000;
@@ -29,7 +32,6 @@ tr.nechet {
     background: #ff9900;
     border: 3px solid #ffffff;
     outline: 2px solid #000000;
-    text-align: center;
 }
 tr.chet {
     border: 3px solid #ffffff;
