@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
 }
-container.fluid {
+evro {
     display: flex;
     flex-direction: column;
 }
@@ -71,12 +71,6 @@ div.tablet {
 }
 div.list {
     order: 2;
-}
-div.format {
-    order: 3;
-}
-#fram {
-    order: 4;
 }
 @media (min-width: 768px)
 {
