@@ -7,7 +7,8 @@
           let f1=document.getElementsByName("col");
           let f2=document.getElementsByName("hg");
           let r=document.getElementById("result");
-          r.innerHTML=f1[0].value*
+          r.innerHTML=f1[0].value*f2[0].value;
+          return false;
       }
     </script>
   </head>
@@ -18,6 +19,7 @@
       <option>3453</option>
       <option>5678</option>
     </select>
+    <button onclick="return click1()">ОК</button>
     <div id="result"></div>
   </body>
 </html>
