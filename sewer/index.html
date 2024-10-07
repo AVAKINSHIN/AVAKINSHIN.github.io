@@ -4,13 +4,11 @@
     <script>
       function click1()
       {
-          let f1=document.getElementsByName("col");
-          let q=Number("col");
-          let f2=document.getElementsByName("hg");
-          let g=Number("hg");
-          let r=document.getElementById("result");
-          r.innerHTML=q[0].value*g[0].value;
-          console.log(f1[0].value*hg[0].value);
+          var f1=parseFloat(document.getElementsByName("col"));
+          var f2=parseFloat(document.getElementsByName("hg"));
+          var res=f1*f2;
+          let r=document.getElementById("result").innerText="Result: " + res;
+          console.log(r[0]);
           return false;
       }
     </script>
