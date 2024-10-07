@@ -5,7 +5,9 @@
       function click1()
       {
           let f1=document.getElementsByName("col");
+          let q=praceFloat("col");
           let f2=document.getElementsByName("hg");
+          let g=praceFloat("hg");
           let r=document.getElementById("result");
           r.innerHTML=f1[0].value*hg[0].value;
           console.log(f1[0].value*hg[0].value);
@@ -14,7 +16,7 @@
     </script>
   </head>
   <body>
-    <input name="col" type="int" />
+    <input name="col" type="text" />
     <select name="hg">
       <option>7654</option>
       <option>3453</option>
