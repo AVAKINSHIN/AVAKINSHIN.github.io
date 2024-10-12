@@ -7,7 +7,7 @@ function calculate(event) {
     event.preventDefault();
 
     let result = document.getElementById("result");
-    let forest = document.getElementById("forest").value;
+    let forest = document.getElementById("product").value;
     let priceElement = document.getElementById("product").value;
     let countElement = document.getElementById("quantity").value;
 
