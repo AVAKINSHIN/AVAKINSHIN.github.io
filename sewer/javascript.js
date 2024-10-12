@@ -7,7 +7,6 @@ function calculate(event) {
     event.preventDefault();
 
     let result = document.getElementById("result");
-    let forest = document.getElementById("product").value;
     let priceElement = document.getElementById("product").value;
     let countElement = document.getElementById("quantity").value;
 
@@ -20,7 +19,7 @@ function calculate(event) {
     } else {
         c = parseInt(priceElement) * parseInt(countElement);
     }
-    forest.innerHTML = forest;
+    forest.innerHTML = parseInt(priceElement);
     result.innerHTML = c;
 }
 
