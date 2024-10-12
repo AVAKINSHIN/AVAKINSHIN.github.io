@@ -6,7 +6,7 @@ function isNumber(str) {
 function calculate(event) {
     event.preventDefault();
 
-    let r = document.getElementById("result");
+    let result = document.getElementById("result");
 
     let priceElement = document.getElementById("product").value;
     let countElement = document.getElementById("quantity").value;
@@ -21,7 +21,7 @@ function calculate(event) {
         c = parseInt(priceElement) * parseInt(countElement);
     }
 
-    r.innerHTML = content;
+    result.innerHTML = content;
 }
 
 
