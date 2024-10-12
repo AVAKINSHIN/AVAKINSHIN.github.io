@@ -21,7 +21,7 @@ function calculate(event) {
         c = parseInt(priceElement) * parseInt(countElement);
     }
 
-    result.innerHTML = content;
+    result.innerHTML = c;
 }
 
 
