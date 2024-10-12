@@ -20,7 +20,7 @@ function calculate(event) {
     } else {
         c = parseInt(priceElement) * parseInt(countElement);
     }
-
+    forest.innerHTML = forest;
     result.innerHTML = c;
 }
 
