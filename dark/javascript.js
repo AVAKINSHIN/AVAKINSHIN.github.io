@@ -5,13 +5,11 @@ function isNumber(str) {
 
 function calculate(event) {
     event.preventDefault();
-
     let result = document.getElementById("result");
     let priceElement = document.getElementById("product").value;
     let countElement = document.getElementById("quantity").value;
-
+    let croue = document.getElementById("less");
     let c;
-
     if (priceElement === "") {
         c = "Выберите продукцию!";
     } else if (!isNumber(countElement)) {
