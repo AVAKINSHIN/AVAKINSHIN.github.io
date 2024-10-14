@@ -1,1 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <h1>Задание 5. Калькулятор стоимости</h1>
+    <form>
+      <label for="product">Продукты:</label>
+      <select id="product" name="product" required>
+          <option value="">Выберите модель</option>
+          <option value="4171">Чайник</option>
+          <option value="819">Наушники</option>
+          <option value="770">Батончик</option>
+          <option value="1721">Смартчасы</option>
+          <option value="384">Салфетки</option>
+          <option value="664">Носки</option>
+          <option value="648">Секатор</option>
+          <option value="690">Шапка</option>
+      </select>
+      <div id="forest"></div><br />
 
+      <label for="quantity">Введите колличество:</label>
+      <input id="quantity" name="quantity"
+        min="1" value="1" required type="number" /><br />
+
+      <button id="btn" type="submit">Рассчитать</button>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
