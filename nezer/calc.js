@@ -28,7 +28,7 @@ function get_products() {
         },
         {
             name: "Наушники",
-            price: 419,
+            price: 819,
             properties: [
                 {
                     name: "Помощь в запуске гаджета",
@@ -64,18 +64,23 @@ function get_products() {
                     price: 300
                 },
                 {
-                    name: "Доставка с дополнительной эксплуатацией",
+                    name: "Доставка на дом с дополнительной эксплуатацией",
                     price: 500
+                },
             ],
-            price: 4171,
+            price: 1721,
             properties: [
                 {
-                    name: "Hearts of Stone",
-                    price: 449
+                    name: "Помощь в запуске гаджета",
+                    price: 100
                 },
                 {
-                    name: "Blood and Wine",
-                    price: 349
+                    name: "Дополнительная симкарта",
+                    price: 300
+                },
+                {
+                    name: "Гарантия на 1 год",
+                    price: 500
                 }
             ]
         }
