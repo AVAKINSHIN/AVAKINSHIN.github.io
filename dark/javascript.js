@@ -1,58 +1,85 @@
 function get_products() {
     return [
         {
-            name: "Smuta",
-            price: 2000
+            name: "Салфетки",
+            price: 384
         },
         {
-            name: "Atomic Heart",
+            name: "Чайник",
             options: [
                 {
-                    name: "Gold edition",
-                    price: 700
+                    name: "Самовывоз",
+                    price: 0
                 },
                 {
-                    name: "Premium edition",
-                    price: 1100
+                    name: "Доставка на дом",
+                    price: 100
                 },
                 {
-                    name: "Ultimate edition",
-                    price: 1500
+                    name: "Дополнительная эксплуатация,
+                    price: 300
+                },
+                {
+                    name: "Доставка на дом с дополнительной эксплуатацией",
+                    price: 500
                 }
             ],
-            price: 2499
+            price: 4171
         },
         {
-            name: "Cuphead",
-            price: 419,
+            name: "Наушники",
+            price: 819,
             properties: [
                 {
-                    name: "Cuphead - The Delicious Last Course",
-                    price: 169
+                    name: "Помощь в запуске гаджета",
+                    price: 100
+                },
+                {
+                    name: "Дополнительная симкарта",
+                    price: 300
+                },
+                {
+                    name: "Гарантия на 1 год",
+                    price: 0
                 }
             ]
         },
         {
-            name: "The Witcher 3: Wild Hunt",
+            name: "Батончик",
+            price: 770
+        {
+            name: "Смартчасы",
             options: [
                 {
-                    name: "Ultra edition",
+                    name: "Самовывоз",
+                    price: 0
+                },
+                {
+                    name: "Доставка на дом",
+                    price: 100
+                },
+                {
+                    name: "Дополнительная эксплуатация",
+                    price: 300
+                },
+                {
+                    name: "Доставка на дом с дополнительной эксплуатацией",
                     price: 500
                 },
-                {
-                    name: "Game of the year edition",
-                    price: 1000
-                }
             ],
-            price: 1999,
+            price: 1721,
             properties: [
                 {
-                    name: "Hearts of Stone",
-                    price: 449
+                    name: "Помощь в запуске гаджета",
+                    price: 100
                 },
                 {
-                    name: "Blood and Wine",
-                    price: 349
+                    name: "Дополнительная симкарта",
+                    price: 300
+                },
+                {
+                    name: "Гарантия на 1 год",
+                    price: 500
                 }
             ]
         }
