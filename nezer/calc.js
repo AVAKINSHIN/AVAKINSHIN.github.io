@@ -27,7 +27,7 @@ function get_products() {
             price: 4171
         },
         {
-            name: "Cuphead",
+            name: "Наушники",
             price: 419,
             properties: [
                 {
