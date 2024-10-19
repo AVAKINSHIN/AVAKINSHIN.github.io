@@ -6,42 +6,22 @@
   <body>
     <h1>Задание 5. Калькулятор стоимости</h1>
     <form>
-      <label for="product">Продукты:</label>
-      <select id="product" name="product" required>
-          <option value="">Выберите модель</option>
-          <option value="384" id="1">Салфетки</option>
-          <option value="4171" id="2">Чайник</option>
-          <option value="819" id="3">Наушники</option>
-          <option value="770" id="4">Батончик</option>
-          <option value="1721" id="5">Смартчасы</option>
-          <option value="664" id="6">Носки</option>
-          <option value="648" id="7">Секатор</option>
-          <option value="690" id="8">Шапка</option>
-      </select><br />
-      <p>Стоимость единицы товара: </p><div id="forest"></div><br />
-
-      <select id="less">
-        <option value="">Выберите допопцию к товару</option>
-        <option>Самовывоз</option>
-        <option>Доставка на дом</option>
-        <option>Дополнительная эксплуатация</option>
-        <option>Доставка на дом с дополнительной эксплуатацией</option>
-      </select><br />
-
-      <div id="grew">
-        <p>Выберите плюшку к гаджету</p>
-        <label>Ничего</label>
-        <label>Помощь в запуске гаджета</label>
-        <label>Дополнительная симкарта</label>
-        <label>Гарвнтия на 1 год</label>
-      </div><br />
-      
-      <label for="quantity">Введите колличество:</label>
+      <form>
+      <label for="quantity">Товары:</label>
       <input id="quantity" name="quantity"
         min="1" value="1" required type="number" /><br />
 
-      <button id="btn" type="submit">Рассчитать</button>
+      <label>Products:</label><br />
+      <div id="products">
+      </div>
+
+      <div id="options">
+      </div>
+
+      <div id="properties">
+      </div>
     </form>
+
     <div id="result"></div>
   </body>
 </html>
