@@ -1,8 +1,8 @@
 function get_products() {
     return [
         {
-            name: "Smuta",
-            price: 2000
+            name: "Салфетки",
+            price: 384
         },
         {
             name: "Atomic Heart",
