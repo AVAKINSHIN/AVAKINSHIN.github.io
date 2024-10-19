@@ -24,10 +24,10 @@ function calculate(event) {
     let fw = document.getElementById("grew");
     console.log(w.value);
     if (w.value == "3") {
-      radios.style.display = "none";
+      grew.style.display = "none";
     }
     else {
-      radios.style.display = "block";
+      grew.style.display = "block";
     }
   });
   
