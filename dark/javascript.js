@@ -47,6 +47,7 @@ function get_products() {
         {
             name: "Батончик",
             price: 770
+        },
         {
             name: "Смартчасы",
             options: [
