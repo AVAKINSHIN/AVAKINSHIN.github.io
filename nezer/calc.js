@@ -31,8 +31,16 @@ function get_products() {
             price: 419,
             properties: [
                 {
-                    name: "Cuphead - The Delicious Last Course",
-                    price: 169
+                    name: "Помощь в запуске гаджета",
+                    price: 100
+                },
+                {
+                    name: "Дополнительная симкарта",
+                    price: 300
+                },
+                {
+                    name: "Гарантия на 1 год",
+                    price: 0
                 }
             ]
         },
