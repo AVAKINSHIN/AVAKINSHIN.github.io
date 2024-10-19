@@ -24,7 +24,7 @@ function get_products() {
                     price: 500
                 }
             ],
-            price: 2499
+            price: 4171
         },
         {
             name: "Cuphead",
