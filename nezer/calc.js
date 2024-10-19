@@ -5,19 +5,23 @@ function get_products() {
             price: 384
         },
         {
-            name: "Atomic Heart",
+            name: "Чайник",
             options: [
                 {
-                    name: "Gold edition",
-                    price: 700
+                    name: "Самовывоз",
+                    price: 0
                 },
                 {
-                    name: "Premium edition",
-                    price: 1100
+                    name: "Доставка на дом",
+                    price: 100
                 },
                 {
-                    name: "Ultimate edition",
-                    price: 1500
+                    name: "Дополнительная эксплуатация",
+                    price: 300
+                },
+                {
+                    name: "Доставка на дом с дополнительной эксплуатацией",
+                    price: 500
                 }
             ],
             price: 2499
