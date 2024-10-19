@@ -45,18 +45,29 @@ function get_products() {
             ]
         },
         {
-            name: "The Witcher 3: Wild Hunt",
+            name: "Батончик",
+            price: 770
+        },
+        {
+            name: "Смартчасы",
             options: [
                 {
-                    name: "Ultra edition",
-                    price: 500
+                    name: "Самовывоз",
+                    price: 0
                 },
                 {
-                    name: "Game of the year edition",
-                    price: 1000
-                }
+                    name: "Доставка на дом",
+                    price: 100
+                },
+                {
+                    name: "Дополнительная эксплуатация",
+                    price: 300
+                },
+                {
+                    name: "Доставка с дополнительной эксплуатацией",
+                    price: 500
             ],
-            price: 1999,
+            price: 4171,
             properties: [
                 {
                     name: "Hearts of Stone",
