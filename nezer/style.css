@@ -1,0 +1,15 @@
+.slider {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.slider__img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (min-device-width: 800px) {
+    .slider__img {
+        max-width: 400px;
+    }
+}
