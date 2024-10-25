@@ -1,5 +1,5 @@
 div.slider {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -9,7 +9,7 @@ img.kq {
 }
 
 @media screen and (min-device-width: 800px) {
-    .slider__img {
-        max-width: 400px;
+    img.kq {
+        width: 400px;
     }
 }
