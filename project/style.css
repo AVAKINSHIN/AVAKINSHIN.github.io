@@ -1,3 +1,131 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+#container {  display: flex; flex-direction: column; gap: 20px; align-items: safe center; }
+#lay {
+    width: 100%;
+}
+#reset {
+    background: #fc0; 
+    outline: 2px solid #000; 
+    border: 3px solid #fff; 
+    border-radius: 10px;
+    text-align: center;
+}
+textarea  {
+   height: 500px;
+}
+#fram{
+    outline: 2px solid blue;
+    border: 3px solid white;
+    background: green;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+tr.nechet {
+    outline: 2px solid #000000;
+    border: 3px solid #ffffff;
+    background: #00ff00;
+}
+#g {
+    background: #ff9900;
+    border: 3px solid #ffffff;
+    outline: 2px solid #000000;
+    text-align: center;
+}
+tr.chet {
+    border: 3px solid #ffffff;
+    background: #ff0000;
+    color: white;
+    outline: 2px solid #000000;
+}
+tr.gas {
+    font-weight: bold;
+    color: white;
+    background: #20124d;
+    border: 3px solid #ffffff;
+    outline: 2px solid #000000;
+}
+th {
+    border: 3px solid #ffffff;
+    background: #9900ff;
+    color: white;
+    outline: 2px solid #000000;
+}
+td.b {
+    border: 3px solid #ffffff;
+    outline: 2px solid #000000;
+}
+table {
+    width: 100%;
+    overflow: scroll;
+}
+img.logo {
+    width: 99px;
+    height: 99px;
+    border-radius: 50px;
+    border: 3px solid green;
+}
+div.tablet {
+    order: 1;
+    width: 98%;
+}
+div.list {
+    order: 2;
+    width: 98%;
+}
+div.format {
+    order: 3;
+    width: 98%;
+}
+#fram {
+    order: 4;
+    width: 98%;
+}
+@media (min-width: 768px)
+{
+    
+}
+@media (min-width: 960px)
+{
+    #lay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #reset {
+        width: 960px;
+        background: #fc0; 
+        outline: 2px solid #000; 
+        border: 3px solid #fff; 
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+    #fram{
+        width: 960px;
+        outline: 2px solid blue;
+        border: 3px solid white;
+        background: green;
+        color: #ffffff;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+    img.kq {
+        width: 400px;
+    }    
+    #g {
+        background: #ff9900;
+        border: 3px solid #ffffff;
+        outline: 2px solid #000000;
+        text-align: center;
+        width: 960px;
+        position: relative;
+    }
+}
 div.slider {
     width: 90%;
     margin: 0 auto;
@@ -9,7 +137,5 @@ img.kq {
 }
 
 @media screen and (min-device-width: 800px) {
-    img.kq {
-        width: 400px;
-    }
+    
 }
