@@ -1,5 +1,5 @@
 <html>
-    <form>
+    <form action="index.php" method="POST">
       <ol>
         <li><label for="name">ФИО </label><input type="text" placeholder="ФИО" id="name" /></li>
         <li><label for="telephone">Номер телефона </label><input type="tel" placeholder="Номер телефона" id="telephone" /></li>
