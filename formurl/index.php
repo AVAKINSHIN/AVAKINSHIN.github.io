@@ -1,80 +1,115 @@
 <?php
-// Отправляем браузеру правильную кодировку,
-// файл index.php должен быть в кодировке UTF-8 без BOM.
 header('Content-Type: text/html; charset=UTF-8');
-
-// В суперглобальном массиве $_SERVER PHP сохраняет некторые заголовки запроса HTTP
-// и другие сведения о клиненте и сервере, например метод текущего запроса $_SERVER['REQUEST_METHOD'].
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-  // В суперглобальном массиве $_GET PHP хранит все параметры, переданные в текущем запросе через URL.
   if (!empty($_GET['save'])) {
-    // Если есть параметр save, то выводим сообщение пользователю.
-    print('Спасибо, результаты сохранены.');
+         print('Ваша учётная запись зарегистрирована.');
   }
-  // Включаем содержимое файла form.php.
   include('form.php');
-  // Завершаем работу скрипта.
   exit();
 }
-// Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в БД.
-
-// Проверяем ошибки.
+$k=0;
 $errors = FALSE;
 if (empty($_POST['fio'])) {
-  print('Заполните имя.<br/>');
+  print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>Заполните имя.</td></tr>");
   $errors = TRUE;
 }
-
 if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/', $_POST['year'])) {
-  print('Заполните год.<br/>');
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>");
+  if (empty($_POST['year'])) {
+    print("Заполните год.");
+  }
+  else {
+    print("В поле год рождения должно быть указано целое число.");
+  }
+  print("</td></tr>");
   $errors = TRUE;
 }
-
-
-// *************
-// Тут необходимо проверить правильность заполнения всех остальных полей.
-// *************
-
+if (empty($_POST['phone']) || !preg_match('/^\+?[1-9][0-9]{7,14}$/', $_POST['phone'])) {
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>");
+  if (empty($_POST['phone'])) {
+    print("Заполните номер телефона.<br/>");
+  }
+  else {
+    print("Поле номер телефона должно содержать номер формата +X, где X - произвольная последовательность от 7 до 14 цифр.");
+  }
+  print("</td></tr>");
+  $errors = TRUE;
+}
+if (empty($_POST['biography'])) {
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>Поле биография обязательно для заполнения. Напишите хотя бы что-нибудь о себе.</td></tr>");
+  $errors = TRUE;
+}
+if (empty($_POST['gender'])) {
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>Выберите пол.</td></tr>");
+  $errors = TRUE;
+}
+if (empty($_POST['abilities'])) {
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>Выберите хотя бы один предложенный язык из списка.</td></tr>");
+  $errors = TRUE;
+}
+if (empty($_POST['accept'])) {
+  if ($k == 0) {
+    print("<table border='1'><tr><th>Номер ошибки</th><th>Суть проблемы</th></tr>");
+  }
+  $k=$k+1;
+  print("<tr><td>");
+  print($k);
+  print("</td><td>Укажите, ознакомлены ли вы с контрактом.</td></tr>");
+  $errors = TRUE;
+}
 if ($errors) {
-  // При наличии ошибок завершаем работу скрипта.
+  print("<tr><td colspan='2'><a href='http://u68768.kubsu-dev.ru/formurl'>Попробуйте ещё раз заполнить поле</a></td></tr></table>");
   exit();
 }
-
-// Сохранение в базу данных.
-
-$user = 'u68768'; // Заменить на ваш логин uXXXXX
-$pass = '5901684'; // Заменить на пароль
+$user = 'u68768';
+$pass = '5901684';
 $db = new PDO('mysql:host=localhost;dbname=u68768', $user, $pass,
-  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
-
-// Подготовленный запрос. Не именованные метки.
+  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 try {
-  $stmt = $db->prepare("INSERT INTO person SET fio = ?, email = ?, year = 2000, gender = '0', phone = '9563442132434735', biography = 'fdfdsgtfrhyhfse'");
-  $stmt->execute([$_POST['fio'], 'email']);
+  $stmt = $db->prepare("INSERT INTO person SET fio = ?, email = ?, year = ?, gender = ?, phone =  ?, biography = ?, accept = ?");
+  $stmt->execute([$_POST['fio'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['phone'], $_POST['biography'], $_POST['accept']]);
+  $last_id = $db->lastInsertId();
+  foreach ($_POST['abilities'] as $ability) {
+          $stmt = $db->prepare("INSERT INTO person_language SET id_l = ?, id_p = ?");
+          $stmt->execute([$ability, $last_id]);
+  }
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
   exit();
-}
-
-//  stmt - это "дескриптор состояния".
- 
-//  Именованные метки.
-//$stmt = $db->prepare("INSERT INTO test (label,color) VALUES (:label,:color)");
-//$stmt -> execute(['label'=>'perfect', 'color'=>'green']);
- 
-//Еще вариант
-/*$stmt = $db->prepare("INSERT INTO users (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
-$stmt->bindParam(':firstname', $firstname);
-$stmt->bindParam(':lastname', $lastname);
-$stmt->bindParam(':email', $email);
-$firstname = "John";
-$lastname = "Smith";
-$email = "john@test.com";
-$stmt->execute();
-*/
-
-// Делаем перенаправление.
-// Если запись не сохраняется, но ошибок не видно, то можно закомментировать эту строку чтобы увидеть ошибку.
-// Если ошибок при этом не видно, то необходимо настроить параметр display_errors для PHP.
-header('Location: ?save=1');
+  }
+header('Location: ?save=2');
