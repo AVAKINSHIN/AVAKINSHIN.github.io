@@ -95,8 +95,8 @@ if ($errors) {
   print("<tr><td colspan='2'><a href='http://u68768.kubsu-dev.ru/formurl'>Попробуйте ещё раз заполнить поле</a></td></tr></table>");
   exit();
 }
-$user = 'u68768';
-$pass = '5901684';
+$user = 'uXXXXX';
+$pass = 'XXXXXXX';
 $db = new PDO('mysql:host=localhost;dbname=u68768', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 try {
