@@ -175,7 +175,7 @@ else
     $stmt = $db->prepare("INSERT INTO person SET fio = ?, email = ?, year = ?, gender = ?, phone =  ?, biography = ?, accept = ?");
     $stmt->execute([$_POST['fio'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['phone'], $_POST['biography'], $_POST['accept']]);
     $last_id = $db->lastInsertId();
-    foreach ($_POST['abilities'] as $ability)
+    foreach ($_POST['language'] as $ability)
     {
           $stmt = $db->prepare("INSERT INTO person_language SET id_l = ?, id_p = ?");
           $stmt->execute([$ability, $last_id]);
