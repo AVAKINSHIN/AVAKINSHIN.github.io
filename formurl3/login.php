@@ -4,17 +4,25 @@ $session_started = false;
 if ($_COOKIE[session_name()] && session_start()) {
   $session_started = true;
   if (!empty($_SESSION['login'])) {
-
-//Вы уже авторизовались в системе. Хотите выйти или продолжить? <br />
-//<form action="./" method="post">
-//<input type="submit" value="Продолжить" />
-//</form>
-//<form action="rabi.php" method="get">
-//<input type="submit" value="Выйти" />
-          //</form>
-//<?php
-          session_destroy();
-          header('Location: login.php');
+if (isset($_COOKIE[session_name()]) && session_start()) {
+  $session_started = true;
+  if (!empty($_SESSION['login']))
+  {
+          if (isset($_POST['exit']))
+          {
+                session_destroy();
+                header('Location: login.php');
+                exit();
+          }
+?>
+Вы уже авторизовались в системе. Хотите выйти или продолжить? <br />
+<form action="./" method="post">
+<input type="submit" value="Продолжить" />
+</form>
+<form action="login.php" method="post">
+<input type="submit" value="Выйти" name="exit" />
+</form>
+<?php
           exit();
   }
 }
