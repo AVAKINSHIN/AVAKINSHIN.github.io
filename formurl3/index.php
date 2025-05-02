@@ -35,11 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
   }
   if (empty($errors) && !empty($_COOKIE[session_name()]) && session_start() && !empty($_SESSION['login']))
   {
-    // TODO: загрузить данные пользователя из БД
-    // и заполнить переменную $values,
-    // предварительно санитизовав.
-    // Для загрузки данных из БД делаем запрос SELECT и вызываем метод PDO fetchArray(), fetchObject() или fetchAll()
-    // См. https://www.php.net/manual/en/pdostatement.fetchall.php
+    $db = new PDO('mysql:host=localhost;dbname=uXXXXX', 'uXXXXX', 'XXXXXXX',
+          [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+          $stmt=$db->prepare("SELECT fio, email, year, gender, phone, biography, accept FROM person WHERE id=?");
+          $stmt->execute([$_SESSION['uid']);
+          if ($stmt->rowCount()!=0)
+          {
+                  $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                  foreach (array('fio', 'phone', 'email', 'year', 'gender', 'biography', 'accept') as $v)
+                  {
+                        $values[$v] = strip_tags($row[$v]);
+                  }
+          }
     printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
   }
   include('form.php');
@@ -185,7 +192,7 @@ else
      }
   $user = 'uXXXXX';
   $pass = 'XXXXXXX';
-  $db = new PDO('mysql:host=localhost;dbname=u68768', $user, $pass,
+  $db = new PDO('mysql:host=localhost;dbname=uXXXXX', $user, $pass,
           [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
   if (!empty($COOKIE[session_name()]) && session_start() && !empty($_SESSION['login']))
   {
