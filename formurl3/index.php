@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
     $db = new PDO('mysql:host=localhost;dbname=uXXXXX', 'uXXXXX', 'XXXXXXX',
           [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
           $stmt=$db->prepare("SELECT fio, email, year, gender, phone, biography, accept FROM person WHERE id=?");
-          $stmt->execute([$_SESSION['uid']);
+          $stmt->execute([$_SESSION['uid']]);
           if ($stmt->rowCount()!=0)
           {
                   $row=$stmt->fetch(PDO::FETCH_ASSOC);
