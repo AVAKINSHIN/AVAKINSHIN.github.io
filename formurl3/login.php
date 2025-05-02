@@ -33,35 +33,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 <?php
 }
 else {
-         $db = new PDO('mysql:host=localhost;dbname=uXXXXX', 'uXXXXX', 'XXXXXXX',
-          [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-        try
+        if (empty($_POST['login']) || empty($_POST['pass']))
         {
-                $stmt=$db->prepare("SELECT id_user, pass FROM users WHERE login=?");
+                print("Неверный логин или пароль<br />");
+                print("<a href='login.php'>Попробовать снова</a> <br />");
+                print("<a href='index.php'>Продолжить как гость</a>");
+                exit();
+        }
+         $db = new PDO('mysql:host=localhost;dbname=u68768', 'u68768', '5901684',
+                 [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+        $stmt=$db->prepare("SELECT id_user, pass FROM users WHERE name=?");
                 $stmt->execute([$_POST['login']]);
                 if ($stmt->rowCount() == 0)
                 {
-                        setcookie("login_error", "Неверный логин или пароль", 24 * 60 * 60);
-                        header("Location: login.php");
+                        print("90");
+                        setcookie('login_error', "Неверный логин или пароль", 24 * 60 * 60);
+                        //header("Location: login.php");
+                        exit();
                 }
-        }
-        catch(PDOException $e)
-        {
-                setcookie("login_error", "Неверный логин или пароль", 24 * 60 * 60);
-                header('Location: login.php');
-        }
-        if (!password_verify($_POST['pass'], $wq[1]))
-        {
-            setcookie("login_error", "Неверный логин или пароль", 24 * 60 * 60);
-            header('Location: login.php');
-                exit();
-        }
-  if (!$session_started)
-  {
-    session_start();
-  }
-  $_SESSION['login'] = $_POST['login'];
-  $_SESSION['uid'] = 123;
-  header('Location: ./');
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                if (!password_verify($_POST['pass'], $row['pass']))
+                {
+                        print("Неверный логин или пароль<br />");
+                        print("<a href='login.php'>Попробовать снова</a> <br />");
+                        print("<a href='index.php'>Продолжить как гость</a>");
+                        exit();
+                }
+                if (!$session_started)
+                {
+                        session_start();
+                }
+                $_SESSION['login'] = $_POST['login'];
+                $_SESSION['uid'] = $row['id_user'];
+                header('Location: ./');
 }
 ?>
