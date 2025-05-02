@@ -1,8 +1,5 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-
-// В суперглобальном массиве $_SESSION хранятся переменные сессии.
-// Будем сохранять туда логин после успешной авторизации.
 $session_started = false;
 if ($_COOKIE[session_name()] && session_start()) {
   $session_started = true;
@@ -46,9 +43,9 @@ else {
                 $stmt->execute([$_POST['login']]);
                 if ($stmt->rowCount() == 0)
                 {
-                        print("90");
-                        setcookie('login_error', "Неверный логин или пароль", 24 * 60 * 60);
-                        //header("Location: login.php");
+                        print("Неверный логин или пароль<br />");
+                        print("<a href='login.php'>Попробовать снова</a> <br />");
+                        print("<a href='index.php'>Продолжить как гость</a>");
                         exit();
                 }
                 $row=$stmt->fetch(PDO::FETCH_ASSOC);
