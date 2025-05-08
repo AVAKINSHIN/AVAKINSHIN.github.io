@@ -1,5 +1,5 @@
 <?php
-        $db = new PDO('mysql:host=localhost;dbname=u68768', 'u68768', '5901684',
+        $db = new PDO('mysql:host=localhost;dbname=uXXXXX', 'uXXXXX', 'XXXXXXX',
                 [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         function selectLanguage($db, $r)
         {
