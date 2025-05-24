@@ -2,7 +2,8 @@
 header('Content-Type: text/html; charset=UTF-8');
 include("functions.php");
 $session_started = false;
-if (isset($_COOKIE[session_name()]) && session_start()) {                                                                                                     $session_started = true;
+if (isset($_COOKIE[session_name()]) && session_start()) {                                                                                       
+  $session_started = true;
   if (!empty($_SESSION['login']))
   {
     $min = intval(date('i')) - $_SESSION['min'];
