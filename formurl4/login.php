@@ -2,31 +2,22 @@
 header('Content-Type: text/html; charset=UTF-8');
 include("functions.php");
 $session_started = false;
-if (isset($_COOKIE[session_name()]) && session_start()) {                                                                                                   
-  $session_started = true;
+if (isset($_COOKIE[session_name()]) && session_start()) {                                                                                                     $session_started = true;
   if (!empty($_SESSION['login']))
   {
-    if (isset($_POST['exit']))
-      {
+    $min = intval(date('i')) - $_SESSION['min'];
+    if ($_SESSION['date'] != date('Y-m-d') || $_SESSION['hr'] != date('H') || $min > 30 || isset($_POST['exit']))
+    {
         session_destroy();
         header('Location: login.php');
         exit();
-        }
+    }
     $languages=empty($_COOKIE['language_value'])?array():explode("|", $_COOKIE['language_value']);
           if ($_SERVER['REQUEST_METHOD'] == 'GET')
           {
                 include("checkerrors.php");
-                $stmt=$db->prepare("SELECT fio, email, year, gender, phone, biography, accept FROM person WHERE id=?");
-                $stmt->execute([$_SESSION['uid']]);
-                if ($stmt->rowCount()!=0)
-                {
-                  $row=$stmt->fetch(PDO::FETCH_ASSOC);
-                  foreach (array('fio', 'phone', 'email', 'year', 'gender', 'biography', 'accept') as $v)
-                  {
-                        $values[$v] = strip_tags($row[$v]);
-                  }
-                }
-                printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
+                $values = grabTegs($_SESSION['uid'], $db);
+                printf('Вход с логином %s, uid %d, дата %s, время %s', $_SESSION['login'], $_SESSION['uid'], date('Y-m-d'), date('H:i:s'));
                 include("form.php");
 ?>
 <form action="login.php" method="post">
@@ -38,23 +29,21 @@ if (isset($_COOKIE[session_name()]) && session_start()) {
           else
           {
                   include("errortest.php");
+                  if ($POST['token'] != $_SESSION['token'])
+                  {
+                          setcookie('to', 'Ваш токен устарел. Попробуйте ещё раз.', time() + 30 * 60);
+                          $errors = TRUE;
+                  }
                    if ($errors)
                    {
                         header('Location: login.php');
                         exit();
                    }
-            $stmt = $db->prepare("UPDATE person SET fio=?, phone=?, email=?, year=?, gender=?, biography=?, accept=? WHERE id=?");
-                $stmt->execute([$_POST['fio'], $_POST['phone'], $_POST['email'], $_POST['year'], $_POST['gender'],                                          
-                               $_POST['biography'], $_POST['accept'], $_SESSION['uid']]);
-                $stmt = $db->prepare("DELETE FROM person_language WHERE id_p=?");                                                                           
-            $stmt->execute([$_SESSION['uid']]);                                                                                                                         foreach ($_POST['language'] as $v)
-            {                                                                                                                                               
-              $stmt = $db->prepare("INSERT INTO person_language SET id_l=?, id_p=?");
-                $stmt->execute([$v, $_SESSION['uid']]);
-            }
-            header("Location: login.php");
-            exit();
-          }
+                   updateDB($_POST['fio'], $_POST['phone'], $_POST['email'], $_POST['year'], $_POST['gender'], $_POST['biography'], $_POST['accept'],
+                   $_SESSION['uid'], $_POST['language'], $db);
+                   header("Location: login.php");
+                   exit();
+             }
   }
 }
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
@@ -85,7 +74,7 @@ else
         if ($stmt->rowCount() == 0)
         {
                 print("Неверный логин или пароль<br />");
-          print("<a href='login.php'>Попробовать снова</a> <br />");
+                print("<a href='login.php'>Попробовать снова</a> <br />");
                 print("<a href='index.php'>Продолжить как гость</a>");
                 exit();
         }
@@ -103,6 +92,10 @@ else
         }
         $_SESSION['login'] = $_POST['login'];
         $_SESSION['uid'] = $_POST['uid'];
+        $_SESSION['date'] = date('Y-m-d');
+        $_SESSION['hr'] = date('H');
+        $_SESSION['min'] = date('i');
+        $_SESSION['token'] = bin2hex(random_bytes(32));
         header("Location: login.php");
 }
 ?>
