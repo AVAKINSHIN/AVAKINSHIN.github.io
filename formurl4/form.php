@@ -4,36 +4,7 @@
                 global $languages;
                 print(in_array($num, $languages) ? 'selected' : '');
         }
-?>
-<html>
-  <head>
-    <style>
-        input.n {
-                background-color: blue;
-                color: white;
-        }
-        textarea {
-                width: 500px;
-                height: 500px;
-        }
-        textarea.n {
-                background-color: red;
-                color: white;
-        }
-        .error {
-                border: 2px solid red;
-                color: white;
-                background-color: #781F19;
-        }
-        .save {
-                border: 2px solid blue;
-                background-color: green;
-                color: white;
-        }
-    </style>
-  </head>
-  <body>
-   <?php
+        include('styles.php');
         if (!empty($messages))
         {
                 print('<div id="messages">');
@@ -50,7 +21,7 @@
                 }
                 print('</div>');
         }
-    ?>
+?>
     <form action="" method="POST">
       ФИО:<input name="fio"<?php print'class=';if($errors['fio']){print '"error"';}else{print '"n"';}?>value="<?php print $values['fio'];?>"/><br />
       Номер телефона: <input placeholder="+7(XXX) XXX-XX-XX" name="phone" value="<?php print($values['phone'])?>"
@@ -81,7 +52,8 @@
       <div <?php if($errors['accept']) {print 'class="error"';}?>>С контрактом ознакомлен(а)<br />
         <input type="radio" name="accept" value="1" <?php if ($values['accept']=='1'){print($values['accept']?'checked':'');}?> />Да
         <input type="radio" name="accept" value="0" <?php if ($values['accept']=='0'){print($values['accept']?'checked':'');}?> />Нет</div>
-      <input type="submit" class="n" value="Сохранить" />
+<?php if(isset($_COOKIE[session_name()]) && session_start()){print('<input type="hidden" name="token" value="'); print($_SESSION['token']);print('" />');}?>
+      <input type="submit" class="n" name='saver' value="Сохранить" />
     </form>
   </body>
 </html>
