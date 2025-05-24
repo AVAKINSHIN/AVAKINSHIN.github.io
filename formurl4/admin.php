@@ -215,3 +215,5 @@ if (isset($_COOKIE['vy']))
 Введите сюда id юзера, данные которого хотите изменить <input name="vazeliny" class='<?php if (isset($_COOKIE['vy'])) print('error'); else print('n');?>' />
 <input type="submit" name="update" value="Изменить запись юзера" />
 </form>
+</body>
+</html>
