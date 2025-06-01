@@ -22,9 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')
 <input type="submit" value="Войти как администратор" />
 </form>
 </div>
-<script>
-      fg();
-</script>
 </body>
 </html>
 <?php
