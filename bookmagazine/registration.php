@@ -53,5 +53,6 @@ else
                 setcookie('reg_f', 'Данные успешно сохранены. Теперь можете войти в совй личный кабинет.<br />', time() + 30 * 60);
                 header("Location: registration.php");
                 exit();
+        }
 }
 ?>
